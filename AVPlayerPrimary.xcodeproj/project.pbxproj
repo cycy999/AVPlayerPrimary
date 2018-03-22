@@ -14,6 +14,11 @@
 		B6014BA620635C2F00000B69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6014BA420635C2F00000B69 /* LaunchScreen.storyboard */; };
 		B6014BB120635C2F00000B69 /* AVPlayerPrimaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6014BB020635C2F00000B69 /* AVPlayerPrimaryTests.swift */; };
 		B6014BBC20635C2F00000B69 /* AVPlayerPrimaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6014BBB20635C2F00000B69 /* AVPlayerPrimaryUITests.swift */; };
+		B6014BCD206375B000000B69 /* UIColorExpand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6014BCC206375B000000B69 /* UIColorExpand.swift */; };
+		B6014BD12063766600000B69 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6014BD02063766600000B69 /* Config.swift */; };
+		B6014BD320637A5B00000B69 /* VideoRecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6014BD220637A5B00000B69 /* VideoRecordingController.swift */; };
+		B6014BD5206380B100000B69 /* VideoOperatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6014BD4206380B100000B69 /* VideoOperatorView.swift */; };
+		D87D0241CD961F2F14DEA71B /* Pods_AVPlayerPrimary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F3805B6A7C79E5D5F29D1D /* Pods_AVPlayerPrimary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		943B1B3C2C3C3A7F5D00558A /* Pods-AVPlayerPrimary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerPrimary.release.xcconfig"; path = "Pods/Target Support Files/Pods-AVPlayerPrimary/Pods-AVPlayerPrimary.release.xcconfig"; sourceTree = "<group>"; };
 		B6014B9820635C2F00000B69 /* AVPlayerPrimary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPlayerPrimary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6014B9B20635C2F00000B69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6014B9D20635C2F00000B69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,12 @@
 		B6014BB720635C2F00000B69 /* AVPlayerPrimaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVPlayerPrimaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6014BBB20635C2F00000B69 /* AVPlayerPrimaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerPrimaryUITests.swift; sourceTree = "<group>"; };
 		B6014BBD20635C2F00000B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6014BCC206375B000000B69 /* UIColorExpand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExpand.swift; sourceTree = "<group>"; };
+		B6014BD02063766600000B69 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		B6014BD220637A5B00000B69 /* VideoRecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordingController.swift; sourceTree = "<group>"; };
+		B6014BD4206380B100000B69 /* VideoOperatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoOperatorView.swift; sourceTree = "<group>"; };
+		C1F3805B6A7C79E5D5F29D1D /* Pods_AVPlayerPrimary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVPlayerPrimary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8ACFDACE417DA284C4C6A26 /* Pods-AVPlayerPrimary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerPrimary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AVPlayerPrimary/Pods-AVPlayerPrimary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87D0241CD961F2F14DEA71B /* Pods_AVPlayerPrimary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +87,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4165B8C1EB287CA3E9E90900 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1F3805B6A7C79E5D5F29D1D /* Pods_AVPlayerPrimary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5886A95B174F3D7E03B4FA6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8ACFDACE417DA284C4C6A26 /* Pods-AVPlayerPrimary.debug.xcconfig */,
+				943B1B3C2C3C3A7F5D00558A /* Pods-AVPlayerPrimary.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B6014B8F20635C2F00000B69 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +111,8 @@
 				B6014BAF20635C2F00000B69 /* AVPlayerPrimaryTests */,
 				B6014BBA20635C2F00000B69 /* AVPlayerPrimaryUITests */,
 				B6014B9920635C2F00000B69 /* Products */,
+				5886A95B174F3D7E03B4FA6E /* Pods */,
+				4165B8C1EB287CA3E9E90900 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +131,10 @@
 			children = (
 				B6014B9B20635C2F00000B69 /* AppDelegate.swift */,
 				B6014B9D20635C2F00000B69 /* ViewController.swift */,
-				B6014B9F20635C2F00000B69 /* Main.storyboard */,
-				B6014BA220635C2F00000B69 /* Assets.xcassets */,
-				B6014BA420635C2F00000B69 /* LaunchScreen.storyboard */,
-				B6014BA720635C2F00000B69 /* Info.plist */,
+				B6014BD220637A5B00000B69 /* VideoRecordingController.swift */,
+				B6014BD4206380B100000B69 /* VideoOperatorView.swift */,
+				B6014BCF2063763600000B69 /* Public&BaseClass */,
+				B6014BC920635C3D00000B69 /* New Group */,
 			);
 			path = AVPlayerPrimary;
 			sourceTree = "<group>";
@@ -125,6 +157,26 @@
 			path = AVPlayerPrimaryUITests;
 			sourceTree = "<group>";
 		};
+		B6014BC920635C3D00000B69 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				B6014BA220635C2F00000B69 /* Assets.xcassets */,
+				B6014BA720635C2F00000B69 /* Info.plist */,
+				B6014B9F20635C2F00000B69 /* Main.storyboard */,
+				B6014BA420635C2F00000B69 /* LaunchScreen.storyboard */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		B6014BCF2063763600000B69 /* Public&BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				B6014BCC206375B000000B69 /* UIColorExpand.swift */,
+				B6014BD02063766600000B69 /* Config.swift */,
+			);
+			path = "Public&BaseClass";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6014BC020635C2F00000B69 /* Build configuration list for PBXNativeTarget "AVPlayerPrimary" */;
 			buildPhases = (
+				53116FF2B2638615ED9DD032 /* [CP] Check Pods Manifest.lock */,
 				B6014B9420635C2F00000B69 /* Sources */,
 				B6014B9520635C2F00000B69 /* Frameworks */,
 				B6014B9620635C2F00000B69 /* Resources */,
+				EADBBC1F90BF5EACA21507AF /* [CP] Embed Pods Frameworks */,
+				8B615F5A8A0CF2AE38228319 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,12 +309,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		53116FF2B2638615ED9DD032 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AVPlayerPrimary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B615F5A8A0CF2AE38228319 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AVPlayerPrimary/Pods-AVPlayerPrimary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EADBBC1F90BF5EACA21507AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AVPlayerPrimary/Pods-AVPlayerPrimary-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AVPlayerPrimary/Pods-AVPlayerPrimary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B6014B9420635C2F00000B69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6014BCD206375B000000B69 /* UIColorExpand.swift in Sources */,
+				B6014BD12063766600000B69 /* Config.swift in Sources */,
 				B6014B9E20635C2F00000B69 /* ViewController.swift in Sources */,
+				B6014BD320637A5B00000B69 /* VideoRecordingController.swift in Sources */,
+				B6014BD5206380B100000B69 /* VideoOperatorView.swift in Sources */,
 				B6014B9C20635C2F00000B69 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,13 +537,18 @@
 		};
 		B6014BC120635C2F00000B69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8ACFDACE417DA284C4C6A26 /* Pods-AVPlayerPrimary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 239W4X687P;
 				INFOPLIST_FILE = AVPlayerPrimary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = qt.AVPlayerPrimary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phoenix.pCapitalTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -438,13 +556,18 @@
 		};
 		B6014BC220635C2F00000B69 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 943B1B3C2C3C3A7F5D00558A /* Pods-AVPlayerPrimary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 239W4X687P;
 				INFOPLIST_FILE = AVPlayerPrimary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = qt.AVPlayerPrimary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phoenix.pCapitalTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
