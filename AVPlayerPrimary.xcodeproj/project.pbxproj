@@ -18,6 +18,9 @@
 		B6014BD12063766600000B69 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6014BD02063766600000B69 /* Config.swift */; };
 		B6014BD320637A5B00000B69 /* VideoRecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6014BD220637A5B00000B69 /* VideoRecordingController.swift */; };
 		B6014BD5206380B100000B69 /* VideoOperatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6014BD4206380B100000B69 /* VideoOperatorView.swift */; };
+		B63EF0C32064C8690016D704 /* VideosManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63EF0C22064C8690016D704 /* VideosManagerController.swift */; };
+		B63EF0C52064CE080016D704 /* VideoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63EF0C42064CE080016D704 /* VideoCollectionCell.swift */; };
+		B63EF0C72064DE010016D704 /* IWManagerVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63EF0C62064DE010016D704 /* IWManagerVideosViewController.swift */; };
 		D87D0241CD961F2F14DEA71B /* Pods_AVPlayerPrimary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F3805B6A7C79E5D5F29D1D /* Pods_AVPlayerPrimary.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,9 @@
 		B6014BD02063766600000B69 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		B6014BD220637A5B00000B69 /* VideoRecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordingController.swift; sourceTree = "<group>"; };
 		B6014BD4206380B100000B69 /* VideoOperatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoOperatorView.swift; sourceTree = "<group>"; };
+		B63EF0C22064C8690016D704 /* VideosManagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosManagerController.swift; sourceTree = "<group>"; };
+		B63EF0C42064CE080016D704 /* VideoCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionCell.swift; sourceTree = "<group>"; };
+		B63EF0C62064DE010016D704 /* IWManagerVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IWManagerVideosViewController.swift; sourceTree = "<group>"; };
 		C1F3805B6A7C79E5D5F29D1D /* Pods_AVPlayerPrimary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVPlayerPrimary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8ACFDACE417DA284C4C6A26 /* Pods-AVPlayerPrimary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerPrimary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AVPlayerPrimary/Pods-AVPlayerPrimary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +139,9 @@
 				B6014B9D20635C2F00000B69 /* ViewController.swift */,
 				B6014BD220637A5B00000B69 /* VideoRecordingController.swift */,
 				B6014BD4206380B100000B69 /* VideoOperatorView.swift */,
+				B63EF0C22064C8690016D704 /* VideosManagerController.swift */,
+				B63EF0C42064CE080016D704 /* VideoCollectionCell.swift */,
+				B63EF0C62064DE010016D704 /* IWManagerVideosViewController.swift */,
 				B6014BCF2063763600000B69 /* Public&BaseClass */,
 				B6014BC920635C3D00000B69 /* New Group */,
 			);
@@ -371,9 +380,12 @@
 				B6014BCD206375B000000B69 /* UIColorExpand.swift in Sources */,
 				B6014BD12063766600000B69 /* Config.swift in Sources */,
 				B6014B9E20635C2F00000B69 /* ViewController.swift in Sources */,
+				B63EF0C72064DE010016D704 /* IWManagerVideosViewController.swift in Sources */,
 				B6014BD320637A5B00000B69 /* VideoRecordingController.swift in Sources */,
 				B6014BD5206380B100000B69 /* VideoOperatorView.swift in Sources */,
 				B6014B9C20635C2F00000B69 /* AppDelegate.swift in Sources */,
+				B63EF0C32064C8690016D704 /* VideosManagerController.swift in Sources */,
+				B63EF0C52064CE080016D704 /* VideoCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

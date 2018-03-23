@@ -80,6 +80,7 @@ class VideoOperatorView: UIView {
         }
     }
     
+    //将视频保存到本地
     func saveVideoToAlbum(_ videoUrl: URL?) {
         var message: String!
         if let url = videoUrl {
@@ -102,14 +103,15 @@ class VideoOperatorView: UIView {
         }
     }
     
+    // 管理 Document 文件夹下 所有视频
     func managerAllVideos() {
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let pathString = path[0] as String
         let list = try? FileManager.default.contentsOfDirectory(atPath: pathString)
         
         if let _ = list {
-//            let managerVideoVC = IWManagerVideosViewController()
-//            self.controller.navigationController?.pushViewController(managerVideoVC, animated: true)
+            let managerVideoVC = VideosManagerController()
+            self.controller.navigationController?.pushViewController(managerVideoVC, animated: true)
         }
     }
     
