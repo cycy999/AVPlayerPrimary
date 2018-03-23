@@ -21,6 +21,7 @@
 		B63EF0C32064C8690016D704 /* VideosManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63EF0C22064C8690016D704 /* VideosManagerController.swift */; };
 		B63EF0C52064CE080016D704 /* VideoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63EF0C42064CE080016D704 /* VideoCollectionCell.swift */; };
 		B63EF0C72064DE010016D704 /* IWManagerVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63EF0C62064DE010016D704 /* IWManagerVideosViewController.swift */; };
+		B63EF0C92064F5BB0016D704 /* DeviceAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63EF0C82064F5BB0016D704 /* DeviceAbout.swift */; };
 		D87D0241CD961F2F14DEA71B /* Pods_AVPlayerPrimary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F3805B6A7C79E5D5F29D1D /* Pods_AVPlayerPrimary.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		B63EF0C22064C8690016D704 /* VideosManagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosManagerController.swift; sourceTree = "<group>"; };
 		B63EF0C42064CE080016D704 /* VideoCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionCell.swift; sourceTree = "<group>"; };
 		B63EF0C62064DE010016D704 /* IWManagerVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IWManagerVideosViewController.swift; sourceTree = "<group>"; };
+		B63EF0C82064F5BB0016D704 /* DeviceAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceAbout.swift; sourceTree = "<group>"; };
 		C1F3805B6A7C79E5D5F29D1D /* Pods_AVPlayerPrimary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVPlayerPrimary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8ACFDACE417DA284C4C6A26 /* Pods-AVPlayerPrimary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerPrimary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AVPlayerPrimary/Pods-AVPlayerPrimary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +144,7 @@
 				B63EF0C22064C8690016D704 /* VideosManagerController.swift */,
 				B63EF0C42064CE080016D704 /* VideoCollectionCell.swift */,
 				B63EF0C62064DE010016D704 /* IWManagerVideosViewController.swift */,
+				B63EF0C82064F5BB0016D704 /* DeviceAbout.swift */,
 				B6014BCF2063763600000B69 /* Public&BaseClass */,
 				B6014BC920635C3D00000B69 /* New Group */,
 			);
@@ -386,6 +389,7 @@
 				B6014B9C20635C2F00000B69 /* AppDelegate.swift in Sources */,
 				B63EF0C32064C8690016D704 /* VideosManagerController.swift in Sources */,
 				B63EF0C52064CE080016D704 /* VideoCollectionCell.swift in Sources */,
+				B63EF0C92064F5BB0016D704 /* DeviceAbout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

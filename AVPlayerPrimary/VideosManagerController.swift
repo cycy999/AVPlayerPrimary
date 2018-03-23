@@ -14,36 +14,40 @@ class VideosManagerController: UIViewController {
 
     let margin: CGFloat = 5
     let viewHight: CGFloat = 50
+    //  MARK: - Properties
+    //  所有视频完整路径
+    var allVideoPaths = [String]()
+    var allVideoImages = [UIImage]()
     
-    var allVideosPaths = [String]()
-    var allImageArray = [UIImage]()
-    
+    //  表示是否被选中的数组
     var nsnumberArray = [NSNumber]()
     
     var collectonView: UICollectionView!
     
+    //  视频是否处于可选择状态
     var videoIsSelected = false
     
-    var operatorVideosArray = [String]()
-    
-    var operatorVideosImage = [UIImage]()
-    
+    //  操作数组
+    var operatorVideoPaths = [String]()
+    //  选中cell的图片
+    var operatorVideoImages = [UIImage]()
+    //  上传、删除按钮
     var bottomView: UIView!
-    
+    //  操作数量Label
     var countLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        allVideosPaths = getAllVideoPaths()
+        //  获取全部本地视频路径
+        allVideoPaths = getAllVideoPaths()
         
         collectonView = config_collection()
         
-        config_button()
+        config_button()        //  添加选择按钮
         
         config_bottomView()
         
-        getVideoImages(allVideosPaths)
+        getVideoImages(allVideoPaths)        //  获取截图
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,14 +61,14 @@ class VideosManagerController: UIViewController {
 extension VideosManagerController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return allVideosPaths.count
+        return allVideoPaths.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! VideoCollectionCell
         
-        if allVideosPaths.count == allImageArray.count {
-            cell.videoInterface.image = allImageArray[indexPath.row]
+        if allVideoPaths.count == allVideoImages.count {
+            cell.videoInterface.image = allVideoImages[indexPath.row]
         }
         
         if videoIsSelected {
@@ -82,8 +86,8 @@ extension VideosManagerController: UICollectionViewDelegate, UICollectionViewDat
         let cell = collectionView.cellForItem(at: indexPath) as! VideoCollectionCell
         guard videoIsSelected else {
             //  不可选择，点击预览
-            let player = AVPlayer.init(url: URL(fileURLWithPath: allVideosPaths[indexPath.row]))
-            print(allVideosPaths[indexPath.row])
+            let player = AVPlayer.init(url: URL(fileURLWithPath: allVideoPaths[indexPath.row]))
+            print(allVideoPaths[indexPath.row])
             let playerController = AVPlayerViewController()
             playerController.player = player
             present(playerController, animated: true, completion: nil)
@@ -94,15 +98,15 @@ extension VideosManagerController: UICollectionViewDelegate, UICollectionViewDat
         cell.videoIsChoose = !cell.videoIsChoose
         
         if cell.videoIsChoose == true {
-            operatorVideosArray.append(allVideosPaths[indexPath.row])
-            operatorVideosImage.append(allImageArray[indexPath.row])
+            operatorVideoPaths.append(allVideoPaths[indexPath.row])
+            operatorVideoImages.append(allVideoImages[indexPath.row])
         } else {
-            let index = operatorVideosArray.index(of: allVideosPaths[indexPath.row])
-            operatorVideosArray.remove(at: index!)
-            operatorVideosImage.remove(at: index!)
+            let index = operatorVideoPaths.index(of: allVideoPaths[indexPath.row])
+            operatorVideoPaths.remove(at: index!)
+            operatorVideoImages.remove(at: index!)
         }
         
-        countLabel.text = "\(operatorVideosArray.count)"
+        countLabel.text = "\(operatorVideoPaths.count)"
         
         nsnumberArray[indexPath.row] = cell.videoIsChoose as NSNumber
         
@@ -195,7 +199,23 @@ extension VideosManagerController {
 
 extension VideosManagerController {
     
-    //获取截图
+    //  通过文件路径获取截图:
+    func getVideoImage(_ videoUrl: URL) -> UIImage? {
+        //  获取截图
+        let videoAsset = AVURLAsset(url: videoUrl)
+        let cmTime = CMTime(seconds: 1, preferredTimescale: 10)
+        let imageGenerator = AVAssetImageGenerator(asset: videoAsset)
+        if let cgImage = try? imageGenerator.copyCGImage(at: cmTime, actualTime: nil) {
+            let image = UIImage(cgImage: cgImage)
+            return image
+        } else {
+            print("获取缩略图失败")
+        }
+        
+        return nil
+    }
+    
+    //  通过文件路径获取截图:
     func getVideoImages(_ urls: [String]) {
         
         DispatchQueue.global().async {
@@ -205,7 +225,7 @@ extension VideosManagerController {
                 let imageGenerator = AVAssetImageGenerator(asset: videoAsset)
                 if let cgImage = try? imageGenerator.copyCGImage(at: cmTime, actualTime: nil) {
                     let image = UIImage(cgImage: cgImage)
-                    self.allImageArray.append(image)
+                    self.allVideoImages.append(image)
                 } else {
                     print("获取缩略图失败")
                 }
@@ -216,6 +236,7 @@ extension VideosManagerController {
         }
     }
     
+    //  点击选择按钮事件
     @objc func chooseButtonAction(_ button: UIButton) {
         button.isSelected = !button.isSelected
         showBottomView(button.isSelected)
@@ -225,7 +246,7 @@ extension VideosManagerController {
     
     func handleChooseAction(_ isChoose: Bool) {
         videoIsSelected = isChoose
-        operatorVideosArray.removeAll()
+        operatorVideoPaths.removeAll()
         if videoIsSelected {
             for i in 0 ..< nsnumberArray.count {
                 nsnumberArray[i] = 0
@@ -244,7 +265,7 @@ extension VideosManagerController {
     
     @objc func deleteAction() {
         //  删除本地文件
-        for item in operatorVideosArray {
+        for item in operatorVideoPaths {
             do {
                 try FileManager.default.removeItem(atPath: item)
             } catch let error as NSError {
@@ -253,18 +274,18 @@ extension VideosManagerController {
         }
         
         //  删除界面元素
-        for index in 0 ..< operatorVideosArray.count {
-            let img = operatorVideosImage[index]
-            let currentIndex = allImageArray.index(of: img)
-            allImageArray.remove(at: currentIndex!)
+        for index in 0 ..< operatorVideoPaths.count {
+            let img = operatorVideoImages[index]
+            let currentIndex = allVideoImages.index(of: img)
+            allVideoImages.remove(at: currentIndex!)
         }
         
         //  重新解析地址
-        allVideosPaths.removeAll()
-        operatorVideosImage.removeAll()
-        allVideosPaths = getAllVideoPaths()
+        allVideoPaths.removeAll()
+        operatorVideoImages.removeAll()
+        allVideoPaths = getAllVideoPaths()
         
-        operatorVideosArray.removeAll()
+        operatorVideoPaths.removeAll()
         countLabel.text = "0"
         
         handleChooseAction(true)
